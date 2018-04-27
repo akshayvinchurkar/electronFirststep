@@ -2,9 +2,9 @@ const { app, BrowserWindow, Menu, dialog } = require('electron')
 const path = require('path')
 const url = require('url')
 
-function createWindow() {
+const createWindow = () => {
     // Create the browser window.
-    win = new BrowserWindow({ width: 800, height: 600 })
+    win = new BrowserWindow({ width: 800, height: 600, title:'Akshay' })
 
     // and load the index.html of the app.
     win.loadURL(url.format({
@@ -15,7 +15,7 @@ function createWindow() {
 
     const Mainmenu = Menu.buildFromTemplate(menu);
     Menu.setApplicationMenu(Mainmenu);
-}
+};
 
 const menu = [
     {
@@ -24,7 +24,7 @@ const menu = [
             {
                 label: 'New File',
                 click() {
-                    dialog.showOpenDialog({properties: ['openFile', 'openDirectory', 'multiSelections']});
+                    dialog.showOpenDialog({properties: ['openFile']});
                 }
             },
             {

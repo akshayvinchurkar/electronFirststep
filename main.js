@@ -1,7 +1,7 @@
 var form = document.querySelector("form");
 var myvalue = document.getElementById("name");
 
-form.onsubmit = function(e) {
+form.onsubmit = (e) => {
     e.preventDefault();
-    console.log(myvalue.value);    
+    console.log(myvalue.value);
 }
