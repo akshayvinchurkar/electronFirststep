@@ -1,13 +1,13 @@
-const { app, BrowserWindow, Menu, dialog } = require('electron')
-const path = require('path')
-const url = require('url')
+const { app, BrowserWindow, Menu, dialog } = require('electron');
+const path = require('path');
+const url = require('url');
 
 const createWindow = () => {
     // Create the browser window.
     win = new BrowserWindow({ 
         width: 800, 
         height: 600, 
-        title:'Akshay',
+        title:'File Creator',
         icon: 'img/logo.png' 
     });
 

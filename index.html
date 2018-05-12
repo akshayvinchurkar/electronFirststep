@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/photon.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <ul id="list">
-        
-    </ul>
+    <!-- <ul id="list"></ul> -->
     <form action="" id="myform">
-        <label for="fileName">File Name</label>
-        <input type="text" id="fileName">
-        <br>
-        <label for="fileContent">File Content</label>
-        <textarea name="" id="fileContent" cols="30" rows="10"></textarea>
-        <br>
-        <input type="submit" value="Create File" class="btn" id="createfile">
+        <div class="form-group">
+            <label for="fileName">File Name</label>
+            <input type="text" class="form-control" id="fileName">
+        </div>
+        <div class="form-group">
+            <label for="fileContent">File Content</label>
+            <textarea name="" id="fileContent" cols="30" class="form-control" rows="10"></textarea>
+        </div>
+        <input type="submit" value="Create File" class="btn btn-large btn-primary" id="createfile">
     </form>
     <script src="main.js"></script>
 </body>

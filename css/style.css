@@ -28,3 +28,9 @@ body {
     list-style: none;
     text-align: center;
 }
+
+#myform {
+    background-color: #fff;
+    padding: 20px;
+    width: 80%;
+}
