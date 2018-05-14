@@ -9,6 +9,7 @@ const {ipcRenderer} = electron;
 fileName = document.getElementById('fileName');
 fileContent = document.getElementById('fileContent');
 createFile = document.getElementById('createfile');
+successMsg = document.getElementById('successMsg');
 pathName = path.join(__dirname, 'Files');
 
 createFile.addEventListener('click', (e) => {
@@ -22,15 +23,19 @@ createFile.addEventListener('click', (e) => {
     }
 });
 
-var createFileForMe = () => {
+createFileForMe = () => {
     let file = path.join(pathName, fileName.value);
     let content = fileContent.value;
     if(fs.existsSync(file)) {
-        console.log('file is exist');
+        successMsg.textContent = "File is Exist";
+        successMsg.style.opacity = 1;
+        successMsg.classList.add('text-negative');
     } else {
         fs.writeFile(file, content, (err) => {
             if (err) throw err;
-            console.log('file is created');
+            successMsg.textContent = "File Created";
+            successMsg.style.opacity = 1;
+            successMsg.classList.add('text-positive');
         });
     }
 }
